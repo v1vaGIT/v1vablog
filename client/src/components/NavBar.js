@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import { NavDropdown, Form, FormControl, Button, NavLink } from "react-bootstrap";
-import { LOGIN_ROUTE, PROFILE_ROUTE } from "../utils/consts";
+import { LOGIN_ROUTE, PROFILE_ROUTE, NEWS_ROUTE } from "../utils/consts";
 import { observer } from "mobx-react-lite";
 import { useNavigate } from "react-router-dom";
 import CreateNews from "./modals/createNews";
@@ -23,7 +23,7 @@ const NavBar = observer(() => {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#">Navbar</Navbar.Brand>
+        <Navbar.Brand onClick={() => navigate(NEWS_ROUTE)}>Navbar</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -43,10 +43,8 @@ const NavBar = observer(() => {
 
           {user.isAuth ? (
             <NavDropdown title="Профиль" id="navbarScrollingDropdown">
-              <NavDropdown.Item>
-                
-                <NavLink to={PROFILE_ROUTE}>Профиль</NavLink>
-                
+              <NavDropdown.Item onClick={() => navigate(PROFILE_ROUTE)}>
+                Профиль
               </NavDropdown.Item>
               <NavDropdown.Item onClick={() => setNewsVisible(true)}>
                 Добавить новость
