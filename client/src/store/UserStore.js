@@ -13,6 +13,7 @@ export default class UserStore {
         //window.location.reload();
     }
     setUser(user) {
+        console.log(user)
         this._user = user
     }
 

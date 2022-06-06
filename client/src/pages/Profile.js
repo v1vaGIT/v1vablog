@@ -9,8 +9,8 @@ const Profile = () => {
         <Col md="3" className="border-right">
           <div class="d-flex flex-column align-items-center text-center p-3 py-1">
           <Image className="rounded-circle mt-5 profileImage" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"></Image>
-            <span class="font-weight-bold">Edogaru</span>
-            <span class="text-black-50">edogaru@mail.com.my</span>
+            <span className="font-weight-bold">nickname</span>
+            <span className="text-black-50">edogaru@mail.com.my</span>
             <span> </span>
           </div>
         </Col>

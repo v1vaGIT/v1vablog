@@ -23,6 +23,9 @@ const user_info = sequelize.define('User_info', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     birthday: {type: DataTypes.DATE},
     //gender: {type: DataTypes.INTEGER}
+    name: {type: DataTypes.STRING, allowNull: true},
+    surname: {type: DataTypes.STRING, allowNull: true},
+    phone: {type: DataTypes.STRING, allowNull: true}
 })
 
 const gender = sequelize.define('Gender', {
